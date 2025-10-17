@@ -47,6 +47,12 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.product-grid > div > h1 {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0 20px 0;
+}
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -156,14 +162,28 @@ body {
 .luxury {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 20px;
     width: 650px;
     font-size: 19px;
 }
 .cart{
     color: white;
     display: flex;
+    position: relative;
+    align-items: center;
 }
+
+.cart-count {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
 .cart_quantity_count{
     margin-top: 16px;
     /* background-color: red; */
