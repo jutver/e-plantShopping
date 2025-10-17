@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './ProductList.css'
 import CartItem from './CartItem';
 import { useDispatch, useSelector } from 'react-redux';
@@ -218,32 +218,6 @@ function ProductList({ onHomeClick }) {
             ]
         }
     ];
-    const styleObj = {
-        backgroundColor: '#4CAF50',
-        color: '#fff!important',
-        padding: '15px 30px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        fontSize: '20px',
-        position: 'relative',
-    }
-    const stylePlantsCenter = {
-        position: 'absolute',
-        left: '50%',
-        transform: 'translateX(-50%)',
-    }
-    const styleCartRight = {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '20px',
-    }
-    const styleA = {
-        color: 'white',
-        fontSize: '30px',
-        textDecoration: 'none',
-    }
-
     const handleHomeClick = (e) => {
         e.preventDefault();
         onHomeClick();
@@ -279,25 +253,23 @@ function ProductList({ onHomeClick }) {
 
     return (
         <div>
-            <div className="navbar" style={styleObj}>
-                <div className="tag">
-                    <div className="luxury">
-                        <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
-                        <a href="/" onClick={(e) => handleHomeClick(e)}>
-                            <div>
-                                <h3 style={{ color: 'white' }}>Paradise Nursery</h3>
-                                <i style={{ color: 'white' }}>Where Green Meets Serenity</i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <div style={stylePlantsCenter}>
-                    <a href="#" onClick={(e) => handlePlantsClick(e)} style={styleA}>Plants</a>
+            <div className="navbar">
+                <div className="navbar__brand">
+                    <img src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png" alt="" />
+                    <a className="navbar__brand-link" href="/" onClick={(e) => handleHomeClick(e)}>
+                        <div>
+                            <h3>Paradise Nursery</h3>
+                            <i>Where Green Meets Serenity</i>
+                        </div>
+                    </a>
                 </div>
 
-                <div style={styleCartRight}>
-                    <a href="#" onClick={(e) => handleCartClick(e)} style={styleA}>
+                <div className="navbar__plants">
+                    <a href="#" onClick={(e) => handlePlantsClick(e)} className="navbar__link">Plants</a>
+                </div>
+
+                <div className="navbar__cart">
+                    <a href="#" onClick={(e) => handleCartClick(e)} className="navbar__link">
                         <div className='cart'>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="IconChangeColor" height="68" width="68">
                                 <rect width="156" height="156" fill="none"></rect>

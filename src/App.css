@@ -40,15 +40,16 @@
 .landing_content {
   z-index: 1;
   text-align: center;
-  width: 320px;
-  flex-shrink: 0;
+  flex: 0 0 35%;
+  max-width: 35%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  margin-right: 20px;
-}.content p,
+  margin-right: 0;
+}
+.content p,
 .content h1 {
   color: white;
 }
@@ -90,8 +91,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  max-width: 900px;
+  flex: 0 0 65%;
+  max-width: 65%;
 }
 
 /* ProductList.css */
@@ -131,12 +132,16 @@
     margin-top: 100px; /* Adjust as needed */
     margin-left: 0;
     width: 80%; /* Adjust as needed */
+    flex: 0 0 80%;
+    max-width: 80%;
     text-align: center;
   }
 
   .aboutus_container {
     margin-top: 20px; /* Adjust as needed */
     width: 80%; /* Adjust as needed */
+    flex: 0 0 80%;
+    max-width: 80%;
   }
 }
 
@@ -144,9 +149,13 @@
   .landing_content {
     margin-top: 50px; /* Adjust as needed */
     width: 90%; /* Adjust as needed */
+    flex: 0 0 90%;
+    max-width: 90%;
   }
 
   .aboutus_container {
     width: 90%; /* Adjust as needed */
+    flex: 0 0 90%;
+    max-width: 90%;
   }
 }

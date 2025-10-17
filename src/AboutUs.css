@@ -1,7 +1,7 @@
 .about-us-container {
     width: 100%;
-    max-width: 850px;
-    padding: 20px 40px;
+    max-width: 1100px; /* increased to allow wider content on landing */
+    padding: 20px 24px; /* slightly reduced side padding so more text fits */
     text-align: justify;
   }
   
